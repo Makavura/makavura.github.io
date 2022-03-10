@@ -36,7 +36,7 @@
                     document.querySelector("body").style.visibility = "visible";
                 };
                 clearInterval(loaderInterval);
-            }, 4500);
+            }, 1500);
         };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -50,20 +50,76 @@
 </head>
 
 <body class="dark:bg-slate-900">
+
     <div class="grid place-items-center h-screen" id="loader">
         <div class="flex flex-col">
             <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_hluo7ags.json" background="transparent"
                 speed="1" class="h-48 md:h-72 lg:h-96 " loop autoplay></lottie-player>
         </div>
     </div>
-    <div class="container mx-auto px-4 py-8 max-w-5xl">
-        <div class="flex flex-row justify-end">
-            <div class="border rounded-lg border-8 border-gray-400 bg-gray-400" id="theme-toggler">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="#00000" id="toggler-icon"
-                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
+    <div class="mx-auto">
+
+        <div class="flex flex-row justify-center">
+            <div class="w-max mt-28">
+                <div
+                    class="max-w-sm pt-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex flex-col items-center pb-10 w-max">
+                        <img class="mb-3 w-48 h-48 rounded-full shadow-lg" src="makavura.png"
+                            alt="Makavura's Profile Image">
+                        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                            Joel
+                            Makavura
+                            Mughanga
+                        </h5>
+                        <p class="text-xs text-center text-gray-500 dark:text-gray-400 px-4">
+                            Digital Applications Designer &
+                            Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container px-4 py-8 max-w-5xl">
+
+                <div class="flex flex-row justify-end">
+                    <div class="border rounded-lg border-8 border-gray-400 bg-gray-400" id="theme-toggler">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="#00000" id="toggler-icon"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                        <ul class="flex hidden rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700">
+                            <li class="w-full">
+
+                                <a href="#"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 focus:z-20 active dark:bg-gray-700 dark:text-white"
+                                    aria-current="page">
+                                    About Me</a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">My
+                                    Experience</a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Projects</a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-72 mt-28">
+
             </div>
         </div>
     </div>
