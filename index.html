@@ -6,36 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Makavura Mughanga | Digital applicatoins designer and developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-    </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
         const darkSVGPathDContent = "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z",
             lightSVGPathDContent = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z";
         let userTheme = localStorage.getItem('theme');
         const setDarkMode = () => {
             document.documentElement.classList.add('dark');
-            if(document.documentElement.classList.contains('light')) document.documentElement.classList.remove('light');
+            if (document.documentElement.classList.contains('light')) document.documentElement.classList.remove('light');
         };
         const setLightMode = () => {
             document.documentElement.classList.add('light');
-            if(document.documentElement.classList.contains('dark')) document.documentElement.classList.remove('dark');
+            if (document.documentElement.classList.contains('dark')) document.documentElement.classList.remove('dark');
         };
         const setUserTheme = (theme) => {
             localStorage.setItem('theme', theme);
-            if(theme == 'light') setLightMode();
-            if(theme == 'dark') setDarkMode();
+            if (theme == 'light') setLightMode();
+            if (theme == 'dark') setDarkMode();
         };
     </script>
+    <script>
+        document.onreadystatechange = function () {
+            const loaderInterval = setInterval(function () {
+                if (document.readyState !== "complete") {
+                    document.querySelector("body").style.visibility = "hidden";
+                    document.querySelector("#loader").style.visibility = "visible";
+                } else {
+                    document.querySelector("#loader").style.display = "none";
+                    document.querySelector("body").style.visibility = "visible";
+                };
+                clearInterval(loaderInterval);
+            }, 4500);
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <script src="./init.js"></script>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body class="dark:bg-slate-900">
-
+    <div class="grid place-items-center h-screen" id="loader">
+        <div class="flex flex-col">
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_hluo7ags.json" background="transparent"
+                speed="1" class="h-96" loop autoplay></lottie-player>
+        </div>
+    </div>
     <div class="container mx-auto px-4 py-8 max-w-5xl">
         <div class="flex flex-row justify-end">
             <div class="border rounded-lg border-8 border-gray-400 bg-gray-400" id="theme-toggler">
@@ -46,7 +66,6 @@
                 </svg>
             </div>
         </div>
-        <hr>
     </div>
 
     <script src="./index.js"></script>
