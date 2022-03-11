@@ -47,8 +47,8 @@ function switchTab(category) {
         case 'projects':
             renderActiveContent('projects');
             break;
-        case 'contact':
-            renderActiveContent('contact');
+        case 'resume':
+            renderActiveContent('resume');
             break;
         default:
             break;
