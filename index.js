@@ -28,3 +28,35 @@ themeToggler.addEventListener("click", (event) => {
     }
     ;
 });
+function switchTab(category) {
+    // @ts-ignore
+    if (document.getElementsByClassName('active-content').item('div')) {
+        // @ts-ignore
+        document.getElementsByClassName('active-content').item('div').style.display = 'none';
+        // @ts-ignore
+        document.getElementsByClassName('active-content').item('div').classList.remove('active-content');
+    }
+    ;
+    switch (category) {
+        case 'about':
+            renderActiveContent('about');
+            break;
+        case 'experience':
+            renderActiveContent('experience');
+            break;
+        case 'projects':
+            renderActiveContent('projects');
+            break;
+        case 'contact':
+            renderActiveContent('contact');
+            break;
+        default:
+            break;
+    }
+    ;
+}
+;
+const renderActiveContent = (category) => {
+    document.getElementById(`${category}`).style.display = 'block';
+    document.getElementById(`${category}`).classList.add('active-content');
+};

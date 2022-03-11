@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Makavura Mughanga | Digital applicatoins designer and developer</title>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        const darkSVGPathDContent = "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z",
-            lightSVGPathDContent = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z";
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <script src="lottie-player.js"></script>
+    <script>
+        const darkSVGPathDContent = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
+            lightSVGPathDContent = "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z";
         let userTheme = localStorage.getItem('theme');
         const setDarkMode = () => {
             document.documentElement.classList.add('dark');
@@ -29,27 +35,21 @@
         document.onreadystatechange = function () {
             const loaderInterval = setInterval(function () {
                 if (document.readyState !== "complete") {
-                    document.querySelector("body").style.visibility = "hidden";
-                    document.querySelector("#loader").style.visibility = "visible";
+                    document.querySelector("#body-content").style.display = "none";
+                    document.querySelector("#loader").style.display = "block";
                 } else {
                     document.querySelector("#loader").style.display = "none";
-                    document.querySelector("body").style.visibility = "visible";
+                    document.querySelector("#body-content").style.display = "block";
                 };
                 clearInterval(loaderInterval);
-            }, 4500);
+            }, 1500);
         };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
     </script>
     <script src="./init.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body class="dark:bg-slate-900">
+<body class="dark:bg-stone-900">
 
     <div class="grid place-items-center h-screen" id="loader">
         <div class="flex flex-col">
@@ -57,12 +57,12 @@
                 speed="1" class="h-48 md:h-72 lg:h-96 " loop autoplay></lottie-player>
         </div>
     </div>
-    <div class="mx-auto">
+
+    <div class="mx-auto" id="body-content" style="display: none;">
 
         <div class="flex flex-row justify-center">
             <div class="w-max mt-28">
-                <div
-                    class="max-w-sm pt-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class="max-w-sm pt-4 bg-white dark:bg-transparent rounded-lg border border-gray-200 shadow-md ">
                     <div class="flex flex-col items-center pb-10 w-max">
                         <img class="mb-3 w-48 h-48 rounded-full shadow-lg" src="makavura.png"
                             alt="Makavura's Profile Image">
@@ -81,39 +81,83 @@
             <div class="container px-4 py-8 max-w-5xl">
 
                 <div class="flex flex-row justify-end">
-                    <div class="border rounded-lg border-8 border-gray-400 bg-gray-400" id="theme-toggler">
+                    <div class=" rounded-lg border-8 border-gray-400 bg-gray-400" id="theme-toggler">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="#00000" id="toggler-icon"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
                     </div>
                 </div>
 
                 <div class="mt-10">
+
                     <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-                        <ul class="flex hidden rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700">
+                        <ul class="flex rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700">
                             <li class="w-full">
 
-                                <a href="#"
-                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 focus:z-20 active dark:bg-gray-700 dark:text-white"
+                                <a onclick="switchTab('about')"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 bg-gray-100  rounded-l-lg focus:ring-4 focus:ring-blue-300 focus:z-20 active dark:bg-transparent dark:border dark:border-white dark:text-white"
                                     aria-current="page">
                                     About Me</a>
                             </li>
                             <li class="w-full">
-                                <a href="#"
-                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">My
+                                <a onclick="switchTab('experience')"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-transparent dark:border dark:border-white dark:hover:bg-gray-700 dark:text-white">My
                                     Experience</a>
                             </li>
                             <li class="w-full">
-                                <a href="#"
-                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Projects</a>
+                                <a onclick="switchTab('projects')"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-transparent dark:border dark:border-white dark:hover:bg-gray-700 dark:text-white">Projects</a>
                             </li>
                             <li class="w-full">
-                                <a href="#"
-                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Contacts</a>
+                                <a onclick="switchTab('contact')"
+                                    class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-transparent dark:border dark:border-white dark:hover:bg-gray-700 dark:text-white">Contacts</a>
                             </li>
                         </ul>
+                    </div>
+
+                    <div id="content"
+                        class="max-w-sm bg-white dark:bg-transparent rounded-lg border border-gray-200 shadow-md min-w-full p-2">
+
+                        <div id="about" class="dark:text-white text-sm text-justify active-content">
+                            Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in
+                            place of English to emphasise design elements over content. It's also called placeholder (or
+                            filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements
+                            of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part
+                            of a Latin text by the classical author and philosopher Cicero. Its words and letters have
+                            been changed by addition or removal, so to deliberately render its content nonsensical; it's
+                            not genuine, correct, or comprehensible Latin anymore. While lorem ipsum's still resembles
+                            classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the
+                            letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic
+                            the typographic appearence of European languages, as are digraphs not to be found in the
+                            original.
+
+                            In a professional context it often happens that private or corporate clients corder a
+                            publication to be made and presented with the actual content still not being ready. Think of
+                            a news blog that's filled with content hourly on the day of going live. However, reviewers
+                            tend to be distracted by comprehensible content, say, a random text copied from a newspaper
+                            or the internet. The are likely to focus on the text, disregarding the layout and its
+                            elements. Besides, random text risks to be unintendedly humorous or offensive, an
+                            unacceptable risk in corporate environments. Lorem ipsum and its many variants have been
+                            employed since the early 1960ies, and quite likely since the sixteenth century.
+                        </div>
+
+                        <div id="experience" style="display: none;">
+                            sented with the actual content still not being ready. Think of
+                            a news blog that's filled with content hourly on the day of going live. However, reviewers
+                            tend to be distracted by comprehensible content, say, a random text copied from a newspaper
+                            or the internet. The are likely to focus 
+                        </div>
+    
+                        <div id="projects" style="display: none;">
+    
+                        </div>
+    
+                        <div id="contact" style="display: none;">
+    
+                        </div>
+
                     </div>
                 </div>
             </div>
