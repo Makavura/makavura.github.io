@@ -18,7 +18,7 @@
         }
     </script>
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <script>
         const darkSVGPathDContent = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
             lightSVGPathDContent = "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z";
@@ -38,15 +38,15 @@
         };
     </script>
     <script>
-        document.onreadystatechange = function () {
-            const loaderInterval = setInterval(function () {
-                if (document.readyState == "complete") {
-                    document.querySelector("#loader").style.display = "none";
-                    document.querySelector("#body-content").style.display = "block";
-                };
-                clearInterval(loaderInterval);
-            }, 1500);
-        };
+        // document.onreadystatechange = function () {
+        //     const loaderInterval = setInterval(function () {
+        //         if (document.readyState == "complete") {
+        //             document.querySelector("#loader").style.display = "none";
+        //             document.querySelector("#body-content").style.display = "block";
+        //         };
+        //         clearInterval(loaderInterval);
+        //     }, 1500);
+        // };
     </script>
     <script src="./init.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -54,14 +54,14 @@
 
 <body class="dark:bg-stone-900">
 
-    <div class="grid place-items-center h-screen" id="loader">
+    <!-- <div class="grid place-items-center h-screen" id="loader">
         <div class="flex flex-col">
             <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_hluo7ags.json" background="transparent"
                 speed="1" class="h-48 md:h-72 lg:h-96 " loop autoplay></lottie-player>
         </div>
-    </div>
+    </div> -->
 
-    <div class="mx-auto" id="body-content" style="display: none;">
+    <div class="mx-auto" id="body-content">
 
         <div class="flex flex-col md:flex-row justify-center">
             <div
@@ -172,7 +172,7 @@
                     <div id="content"
                         class="max-w-sm bg-white dark:bg-transparent rounded-lg border border-gray-200 shadow-md min-w-full md:p-2">
 
-                        <div id="about" class="dark:text-white text-sm text-justify active-content ">
+                        <div id="about" class="dark:text-white text-sm text-justify active-content px-4 py-4">
 
                             <!-- This example requires Tailwind CSS v2.0+ -->
                             <div class=" bg-white dark:bg-transparent">
@@ -187,7 +187,7 @@
 
 
                                         <p
-                                            class="lg:mt-4 text-sm md:text-lg text-gray-900 lg:mx-auto dark:text-white tracking-wider">
+                                            class="lg:mt-4 text-sm md:text-lg text-gray-900 lg:mx-auto dark:text-white tracking-wider mt-2">
 
                                             With an attention to delivering the most value to the customer/stakeholder,
                                             other than coding I
@@ -197,17 +197,18 @@
                                         </p>
 
                                         <p
-                                            class="lg:mt-4 text-sm md:text-lg text-gray-900 lg:mx-auto dark:text-white tracking-wider">
+                                            class="lg:mt-4 text-sm md:text-lg text-gray-900 lg:mx-auto dark:text-white tracking-wider mt-2">
                                             I consistently and resiliently seek to improve myself and those around me as
                                             well as aiming to be mindful of the short and long term effects of decisions
                                             and work output in terms of the organization’s bottom line.
                                         </p>
 
                                         <div class="flex justify-end mt-2 mb-1 py-2">
-                                            <button type="button"
+                                            <a type="button" target="_blank"
+                                                href="https://www.canva.com/design/DAE1NrU80rI/QoSBqp-47198SFVJKX4sWQ/view?utm_content=DAE1NrU80rI&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu#1"
                                                 class="justify-between text-white dark:text-indigo-600 dark:bg-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-slate-200 dark:focus:ring-gray-600">
                                                 Checkout My Resume
-                                            </button>
+                                            </a>
                                         </div>
 
                                     </div>
