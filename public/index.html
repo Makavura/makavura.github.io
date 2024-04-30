@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makavura Mughanga | Digital applications designer and developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        const darkSVGPathDContent = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
+            lightSVGPathDContent = "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z";
+        let userTheme = localStorage.getItem('theme');
+        const setDarkMode = () => {
+            document.documentElement.classList.add('dark');
+            if (document.documentElement.classList.contains('light')) document.documentElement.classList.remove('light');
+        };
+        const setLightMode = () => {
+            document.documentElement.classList.add('light');
+            if (document.documentElement.classList.contains('dark')) document.documentElement.classList.remove('dark');
+        };
+        const setUserTheme = (theme) => {
+            localStorage.setItem('theme', theme);
+            if (theme == 'light') setLightMode();
+            if (theme == 'dark') setDarkMode();
+        };
+    </script>
+    <script src="./build/init.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body class="">
+    <div class="loader">
+        <div class="cube">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="loading__letter">L</div>
+        <div class="loading__letter">o</div>
+        <div class="loading__letter">a</div>
+        <div class="loading__letter">d</div>
+        <div class="loading__letter">i</div>
+        <div class="loading__letter">n</div>
+        <div class="loading__letter">g</div>
+        <div class="loading__letter">.</div>
+        <div class="loading__letter">.</div>
+        <div class="loading__letter">.</div>
+    </div>
+    <script>
+        const addStyles = (el, styles) => {
+            if (el) {
+                for (const style in styles) {
+                    if (Object.hasOwn(styles, style)) {
+                        el.style[style] = styles[style];
+                    }
+                };
+            }
+        };
+
+        addStyles(document.body, {
+            height: "100vh",
+            display: "grid",
+            overflow: "hidden",
+            alignContent: "center",
+            justifyContent: "center",
+            backgroundColor: "#010c15"
+        });
+
+        const hideLoader = () => {
+            document.body.removeAttribute('display');
+            document.body.removeAttribute('align-content');
+            document.body.removeAttribute('justify-content');
+
+            addStyles(document.getElementsByClassName('loader')[0], {
+                display: 'none'
+            });
+            addStyles(document.getElementsByClassName('loading')[0], {
+                display: 'none'
+            });
+        };
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                hideLoader();
+            }, 3000);
+        });
+    </script>
+    <script src="./build/index.js"></script>
+</body>
+
+</html>

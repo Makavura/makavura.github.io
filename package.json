@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "dev": "nodemon -w index.ts -V --exec tsc"
+        "dev": "nodemon -w src/index.ts -V --exec tsc"
     }
 }
