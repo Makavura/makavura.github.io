@@ -1,5 +1,9 @@
 {
-    "scripts": {
-        "dev": "nodemon -w src/index.ts -V --exec tsc"
-    }
+  "scripts": {
+    "buildCss": "npx tailwindcss -i src/**/*.ts -o ./build/styles.css",
+    "dev": "nodemon -w src  -V --exec tsc -W --preserveWatchOutput  && npm run buildCss"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
 }

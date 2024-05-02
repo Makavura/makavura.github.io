@@ -3,6 +3,24 @@ body {
   font-family: "Source Code Pro", monospace;
 }
 
+@font-face {
+    font-family: 'AlojaLight';
+    src: url('./assets/fonts/aloja/Aloja-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.aloja {
+  font-family: 'AlojaLight';
+}
+
+
+.syne-mono {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --cubeSize: 220px;
   --cubeColor: rgb(255 166 41 / 0.45);

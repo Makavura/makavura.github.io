@@ -2,42 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible">
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makavura Mughanga | Digital applications designer and developer</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./build/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-    </script>
-    <link rel="stylesheet" href="./styles.css">
-    <script>
-        const darkSVGPathDContent = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
-            lightSVGPathDContent = "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z";
-        let userTheme = localStorage.getItem('theme');
-        const setDarkMode = () => {
-            document.documentElement.classList.add('dark');
-            if (document.documentElement.classList.contains('light')) document.documentElement.classList.remove('light');
-        };
-        const setLightMode = () => {
-            document.documentElement.classList.add('light');
-            if (document.documentElement.classList.contains('dark')) document.documentElement.classList.remove('dark');
-        };
-        const setUserTheme = (theme) => {
-            localStorage.setItem('theme', theme);
-            if (theme == 'light') setLightMode();
-            if (theme == 'dark') setDarkMode();
-        };
-    </script>
-    <script src="./build/init.js"></script>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="./build/elements/banner-link/index.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body class="">
@@ -64,6 +40,32 @@
         <div class="loading__letter">.</div>
         <div class="loading__letter">.</div>
     </div>
+    <div class="content hidden w-full">
+        <div class="grid grid-cols-3 w-5/12 px-10 py-4 mx-4">
+            <img src="https://digitalolivesstudio.sirv.com/Digital%20Olives%20Studio/%23e0e6e9-3.png"
+                alt="Joel Makavura Mughanga" class="shadow-2xl drop-shadow-md bg-white p-1 rounded-md">
+
+            <div class="text-white col-span-2 flex flex-col justify-between">
+                <p class="text-slate-400 aloja tracking-[10px] drop-shadow-md">
+                    Hello !!!
+                </p>
+                <p class="text-slate-400 text-5xl tracking-[15px] leading-[80px] aloja my-4">
+                    I am Joel Makavura Mughanga
+                </p>
+
+                <p
+                    class="text-slate-900 bg-white w-fit py-2 px-4 rounded-md shadow-2xl drop-shadow-xl uppercase syne-mono">
+                    Software engineer & designer
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 px-14 py-4 gap-4 h-48">
+            <banner-link bannerPath="About"></banner-link>
+            <banner-link bannerPath="Experience"></banner-link>
+            <banner-link bannerPath="Education"></banner-link>
+            <banner-link bannerPath="Projects"></banner-link>
+        </div>
+    </div>
     <script>
         const addStyles = (el, styles) => {
             if (el) {
@@ -88,22 +90,25 @@
             document.body.removeAttribute('display');
             document.body.removeAttribute('align-content');
             document.body.removeAttribute('justify-content');
-
+            document.body.removeAttribute('background-color');
             addStyles(document.getElementsByClassName('loader')[0], {
                 display: 'none'
             });
             addStyles(document.getElementsByClassName('loading')[0], {
                 display: 'none'
             });
+            document.body.style.backgroundColor = '#010c15';
+            document.getElementsByClassName('content')[0].classList.remove('hidden')
         };
 
         window.addEventListener('load', function () {
+
             setTimeout(function () {
                 hideLoader();
-            }, 3000);
+            }, 1500);
         });
     </script>
-    <script src="./build/index.js"></script>
+
 </body>
 
 </html>
