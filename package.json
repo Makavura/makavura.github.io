@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "buildCss": "npx tailwindcss -i src/index.css -o ./public/build/tw.css",
-    "dev": "nodemon -w src  -V --exec tsc -W --preserveWatchOutput  && npm run buildCss"
+    "buildCss": "npx tailwindcss -i src/index.css -o ./public/build/tw.css --watch",
+    "dev": "nodemon -w src  -V --exec tsc -W --preserveWatchOutput  & npm run buildCss"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
