@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "buildCss": "npx tailwindcss -i src/**/*.ts -o ./build/styles.css",
+    "buildCss": "npx tailwindcss -i src/index.css -o ./public/build/tw.css",
     "dev": "nodemon -w src  -V --exec tsc -W --preserveWatchOutput  && npm run buildCss"
   },
   "devDependencies": {

@@ -8,6 +8,7 @@
     <title>Makavura Mughanga | Digital applications designer and developer</title>
 
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./build/tw.css">
     <link rel="stylesheet" href="./build/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +41,7 @@
         <div class="loading__letter">.</div>
         <div class="loading__letter">.</div>
     </div>
-    <div class="content hidden w-full">
+    <div class="content hidden w-full overscroll-auto">
         <div class="grid grid-cols-3 w-5/12 px-10 py-4 mx-4">
             <img src="https://digitalolivesstudio.sirv.com/Digital%20Olives%20Studio/%23e0e6e9-3.png"
                 alt="Joel Makavura Mughanga" class="shadow-2xl drop-shadow-md bg-white p-1 rounded-md">
@@ -60,7 +61,7 @@
             </div>
         </div>
         <div class="grid grid-cols-4 px-14 py-4 gap-4 h-48">
-            <banner-link bannerPath="About"></banner-link>
+            <banner-link bannerPath="About" svgIcon="../public/assets/svg/hi.svg"></banner-link>
             <banner-link bannerPath="Experience"></banner-link>
             <banner-link bannerPath="Education"></banner-link>
             <banner-link bannerPath="Projects"></banner-link>
@@ -87,17 +88,21 @@
         });
 
         const hideLoader = () => {
-            document.body.removeAttribute('display');
-            document.body.removeAttribute('align-content');
-            document.body.removeAttribute('justify-content');
-            document.body.removeAttribute('background-color');
+            document.body.style.display = null;
+            document.body.style.overflow = null;
+            document.body.style.alignContent = null;
+            document.body.style.justifyContent = null;
+            document.body.style.backgroundColor = null;
+
+            document.body.classList.add('overscroll-auto');
+            document.body.style.backgroundColor = '#010c15';
+
             addStyles(document.getElementsByClassName('loader')[0], {
                 display: 'none'
             });
             addStyles(document.getElementsByClassName('loading')[0], {
                 display: 'none'
             });
-            document.body.style.backgroundColor = '#010c15';
             document.getElementsByClassName('content')[0].classList.remove('hidden')
         };
 
@@ -105,7 +110,7 @@
 
             setTimeout(function () {
                 hideLoader();
-            }, 1500);
+            }, 500);
         });
     </script>
 
