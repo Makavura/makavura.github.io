@@ -3,16 +3,17 @@ class BannerLink extends HTMLElement {
 
   constructor() {
     super();
-  };
+    this.onmouseover = this.onHover;
+    this.onmouseleave = this.onHoverOut;
+    this.onclick = this.handleBannerClick.bind(this);
+  }
 
   connectedCallback() {
     this.innerHTML = `<div class="px-1 pt-1 pb-4 bg-[#233DFF] rounded-md ">
                 <div class="drop-shadow-xl shadow-2xl  bg-white rounded-md flex flex-row-reverse  justify-end">
                     <div class="grid grid-rows-2 w-full">
                         <p class="aloja text-slate-500 text-4xl justify-self-end  self-start -ml-24 mt-4 inline z-10 drop-shadow-xl">
-                        ${this.getAttribute(
-                          "bannerPath"
-                        )}
+                        ${this.getAttribute("bannerPath")}
                         </p>
                         <svg class="text-slate-700 justify-self-end self-end p-2" viewBox="0 0 16 16" height="4em" width="4em" {...props}>
                             <path
@@ -28,7 +29,22 @@ class BannerLink extends HTMLElement {
                     }
                 </div>
             </div>`;
-  };
-};
+  }
+
+  handleBannerClick(event: PointerEvent) {
+    const url = this.getAttribute("bannerPath").toLowerCase();
+    window.location.assign(url);
+  }
+
+  onHover(){
+    this.style.zIndex = '100';
+    this.style.transform = "scale(1.2)"
+  }
+
+  onHoverOut (){
+    this.style.zIndex = "10";
+    this.style.transform = 'scale(1.0)'
+  }
+}
 
 customElements.define("banner-link", BannerLink);
