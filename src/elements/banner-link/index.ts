@@ -33,7 +33,7 @@ class BannerLink extends HTMLElement {
 
   handleBannerClick(event: PointerEvent) {
     const url = this.getAttribute("bannerPath").toLowerCase();
-    window.location.assign(url);
+    window.location.assign(url + '.html');
   }
 
   onHover(){

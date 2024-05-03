@@ -21,6 +21,13 @@ body {
   font-style: normal;
 }
 
+.mansalva {
+  font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 :root {
   --cubeSize: 220px;
   --cubeColor: rgb(255 166 41 / 0.45);
