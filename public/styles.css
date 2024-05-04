@@ -27,6 +27,13 @@ body {
   font-style: normal;
 }
 
+.dekko {
+  font-family: "Dekko", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 
 :root {
   --cubeSize: 220px;
