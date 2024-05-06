@@ -13,7 +13,6 @@ class NavigationElement extends HTMLElement {
     this.activeElement = window.location.pathname.includes(
       this.getAttribute("bannerPath").toLowerCase()
     );
-    console.log(this.activeElement);
   }
 
   connectedCallback() {
