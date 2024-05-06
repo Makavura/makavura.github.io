@@ -21,7 +21,7 @@ class NavigationElement extends HTMLElement {
         <div class="drop-shadow-xl shadow-2xl  rounded-md flex flex-row-reverse  justify-end
                     ${this.activeElement ? "bg-none" : "bg-white"} 
         ">  
-            <p class="aloja  text-4xl justify-self-end  self-start ml-4 mt-4 inline z-10 drop-shadow-xl
+            <p class="aloja hidden lg:inline  text-4xl justify-self-end  self-start ml-4 mt-4 z-10 drop-shadow-xl
             ${this.activeElement ? "text-white underline" : "text-slate-500"} 
             ">
                 ${this.getAttribute("bannerPath")}
