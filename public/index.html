@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makavura Mughanga | Digital applications designer and developer</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./build/tw.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./build/elements/banner-link/index.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Dekko&family=Syne+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="">
+    <div class="loader">
+        <div class="cube">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="loading__letter">L</div>
+        <div class="loading__letter">o</div>
+        <div class="loading__letter">a</div>
+        <div class="loading__letter">d</div>
+        <div class="loading__letter">i</div>
+        <div class="loading__letter">n</div>
+        <div class="loading__letter">g</div>
+        <div class="loading__letter">.</div>
+        <div class="loading__letter">.</div>
+        <div class="loading__letter">.</div>
+    </div>
+    <div class="content hidden w-full overscroll-auto h-full">
+        <div class="grid content-center h-full">
+            <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 px-8 md:px-10 py-4 mx-4 w-full  lg:w-5/12">
+                <img src="https://digitalolivesstudio.sirv.com/Digital%20Olives%20Studio/%23e0e6e9-1.png"
+                    alt="Joel Makavura Mughanga" class="shadow-2xl drop-shadow-md bg-white p-1 mr-8 md:mr-0
+                            rounded-md mb-8 md:mb-0 ">
+
+                <div class="text-white lg:col-span-2 flex flex-col justify-between">
+                    <p class="text-[#fdc00f] text-xl aloja tracking-[10px] drop-shadow-md">
+                        Hello !!!
+                    </p>
+                    <p class="text-slate-400 text-4xl lg:text-6xl
+                             tracking-[15px] leading-[80px] aloja my-4">
+                        I am Joel Makavura Mughanga
+                    </p>
+
+                    <p class="text-slate-900 bg-white w-fit py-2 px-4 mr-8 lg:mr-0
+                        tracking-[12px] rounded-md shadow-2xl drop-shadow-xl uppercase syne-mono">
+                        Fullstack Software developer & designer
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-14 py-4 gap-4 h-48">
+                <banner-link bannerPath="About" svgIcon="./assets/svg/hi.svg"></banner-link>
+                <banner-link bannerPath="Experience" svgIcon="./assets/svg/curious.svg"></banner-link>
+                <banner-link bannerPath="Education" svgIcon="./assets/svg/read.svg"></banner-link>
+                <banner-link bannerPath="Projects" svgIcon="./assets/svg/projects.svg"></banner-link>
+            </div>
+        </div>
+    </div>
+    <script>
+        const addStyles = (el, styles) => {
+            if (el) {
+                for (const style in styles) {
+                    if (Object.hasOwn(styles, style)) {
+                        el.style[style] = styles[style];
+                    }
+                };
+            }
+        };
+
+        addStyles(document.body, {
+            height: "100vh",
+            display: "grid",
+            overflow: "hidden",
+            alignContent: "center",
+            justifyContent: "center",
+            backgroundColor: "#010c15"
+        });
+
+        const hideLoader = () => {
+            document.body.style.display = null;
+            document.body.style.overflow = null;
+            document.body.style.alignContent = null;
+            document.body.style.justifyContent = null;
+            document.body.style.backgroundColor = null;
+
+            document.body.classList.add('overscroll-auto');
+            document.body.style.backgroundColor = '#010c15';
+
+            addStyles(document.getElementsByClassName('loader')[0], {
+                display: 'none'
+            });
+            addStyles(document.getElementsByClassName('loading')[0], {
+                display: 'none'
+            });
+            document.getElementsByClassName('content')[0].classList.remove('hidden')
+        };
+
+        window.addEventListener('load', function () {
+
+            setTimeout(function () {
+                hideLoader();
+            }, 1500);
+        });
+    </script>
+
+</body>
+
+</html>
