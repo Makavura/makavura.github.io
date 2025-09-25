@@ -1,9 +1,13 @@
 {
   "scripts": {
     "buildCss": "npx tailwindcss -i src/index.css -o ./public/build/tw.css --watch",
-    "dev": "nodemon -w src  -V --exec tsc -W --preserveWatchOutput  & npm run buildCss"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "devDependencies": {
-    "tailwindcss": "^3.4.3"
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13",
+    "vite": "^6.3.6"
   }
 }
