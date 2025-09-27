@@ -2,8 +2,7 @@
   font-family: "Martian Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .major-mono {
@@ -16,8 +15,7 @@
   font-family: "M PLUS Code Latin", monospace;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .libre-barcode {
@@ -25,3 +23,47 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* From Uiverse.io by csemszepp */
+.container-cube {
+  width: 100%;
+  height: 100%;
+  --s: 300px;
+  --c1: #90e0ef;
+  --c2: #caf0f8;
+  --c3: #00b4d8;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+
+  animation: move-diagonal 15s linear infinite;
+}
+
+@keyframes move-diagonal {
+  from {
+    background-position: 0 0, calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577);
+  }
+  to {
+    background-position: -500px -500px,
+      calc(0.5 * var(--s) - 500px) calc(0.5 * var(--s) * 0.577 - 500px);
+  }
+}
+
+.dark.container-cube {
+  --c1: #006d77;   
+  --c2: #03045e; 
+  --c3: #003566; 
+}
+
+
