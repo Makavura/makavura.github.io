@@ -4,7 +4,7 @@ const localStorageKey: string = "theme";
 const setTheme = (theme: Theme): void => {
   const sunSvgIcon = `<svg 
                 id="sun" 
-                width="33" height="33" viewBox="0 0 33 33" fill="none"
+                width="24" height="24" viewBox="0 0 33 33" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M18 22.5C19.25 22.5 20.3125 22.0625 21.1875 21.1875C22.0625 20.3125 
@@ -28,7 +28,7 @@ const setTheme = (theme: Theme): void => {
   const moonSvgIcon = `<svg 
         id="moon" 
         class="" 
-        width="33" height="33" viewBox="0 0 33 33" fill="none"
+        width="24" height="24" viewBox="0 0 33 33" fill="none"
         xmlns="http://www.w3.org/2000/svg">
             <path d="M14 0C6.26889 0 0 6.26889 0 14C0 21.7311 6.26889 28 14 28C21.7311 28 28 21.7311 28 14C28 13.2844 
                 27.9378 12.5689 27.8444 11.8844C26.32 14.0156 23.8311 15.4 21 15.4C16.3644 15.4 12.6 11.6356 12.6 
