@@ -1,6 +1,6 @@
-const closeNavigationButton = document.getElementById("close-button");
-const navigationToggler = document.getElementById("navigation-toggler");
+const closeNavigationButton = document.getElementById("navigation-close-button");
 const navigationOverlay = document.getElementById("main-page-navigation");
+const navigationToggler = document.getElementById("navigation-toggler");
 
 function openNavigation() {
   navigationOverlay?.classList.remove("hidden");
