@@ -22,6 +22,23 @@
   font-style: normal;
 }
 
+.radley-regular {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.radley-regular-italic {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.geo {
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /* From Uiverse.io by csemszepp */
 .container-cube {
   width: 100%;
