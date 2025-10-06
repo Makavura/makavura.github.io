@@ -43,8 +43,16 @@
 
         <div id="main-page-navigation" class="absolute z-10 bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl 
                            hidden h-fit w-[70vw] rounded-br-[999px] px-20 py-24 mac-shadow flex-col">
+
+            <svg id="navigation-close-button" class="hover:cursor-pointer hover:scale-125 fill-[#051923] dark:fill-white" width="20" height="20"
+                viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12.075 14.6461L3.07614 23.645C2.73945 23.9817 2.31093 24.15 1.79059 24.15C1.27025 24.15 0.841729 23.9817 0.505037 23.645C0.168345 23.3083 0 22.8798 0 22.3594C0 21.8391 0.168345 21.4105 0.505037 21.0739L9.5039 12.075L0.505037 3.07614C0.168345 2.73945 0 2.31093 0 1.79059C0 1.27025 0.168345 0.841729 0.505037 0.505037C0.841729 0.168345 1.27025 0 1.79059 0C2.31093 0 2.73945 0.168345 3.07614 0.505037L12.075 9.5039L21.0739 0.505037C21.4105 0.168345 21.8391 0 22.3594 0C22.8798 0 23.3083 0.168345 23.645 0.505037C23.9817 0.841729 24.15 1.27025 24.15 1.79059C24.15 2.31093 23.9817 2.73945 23.645 3.07614L14.6461 12.075L23.645 21.0739C23.9817 21.4105 24.15 21.8391 24.15 22.3594C24.15 22.8798 23.9817 23.3083 23.645 23.645C23.3083 23.9817 22.8798 24.15 22.3594 24.15C21.8391 24.15 21.4105 23.9817 21.0739 23.645L12.075 14.6461Z"
+                    fill="" />
+            </svg>
+
             <div class="flex flex-row w-full">
-                <div class="mt-8 text-xs tracking-[3px] m-plus-code-latin text-[#051923] dark:text-white">
+                <div class="mt-8 text-base tracking-[3px] m-plus-code-latin text-[#051923] dark:text-white">
 
                     <a href="/software-engineering">
                         <div class="space-y-2 my-4 hover:cursor-pointer hover:scale-110">
@@ -85,7 +93,7 @@
                         class="flex space-x-8 bg-[#F1FAEE] dark:bg-[#051923]  px-4 py-3 hover:cursor-pointer
                                 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.16),0px_3px_6px_rgba(0,0,0,0.23)] hover:scale-110">
                         <span
-                            class="m-plus-code-latin text-xs tracking-widest pr-8 border-r border-black my-auto dark:text-white">Resume</span>
+                            class="m-plus-code-latin text-base tracking-widest pr-8 border-r border-black my-auto dark:text-white">Resume</span>
                         <svg width="25" height="22" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M7.95177 10.2967C7.65054 9.99326 7.48131 9.58167 7.48131 9.1525C7.48131 8.72333 7.65054 8.31174 7.95177 8.00827C8.25299 7.7048 8.66154 7.53431 9.08754 7.53431C9.51354 7.53431 9.92209 7.7048 10.2233 8.00827L13.8966 11.7115V1.61538C13.8966 1.18696 14.0655 0.776079 14.3662 0.473135C14.6669 0.170192 15.0747 0 15.5 0C15.9253 0 16.3331 0.170192 16.6338 0.473135C16.9345 0.776079 17.1034 1.18696 17.1034 1.61538V11.7115L20.7794 8.00692C21.0806 7.70345 21.4891 7.53297 21.9151 7.53297C22.3411 7.53297 22.7497 7.70345 23.0509 8.00692C23.3521 8.31039 23.5214 8.72198 23.5214 9.15115C23.5214 9.58032 23.3521 9.99192 23.0509 10.2954L16.6371 16.7569C16.4881 16.9075 16.3111 17.027 16.1162 17.1085C15.9213 17.1901 15.7124 17.232 15.5013 17.232C15.2903 17.232 15.0813 17.1901 14.8864 17.1085C14.6915 17.027 14.5145 16.9075 14.3656 16.7569L7.95177 10.2967ZM28.3276 14H23.5172C23.092 14 22.6841 14.1702 22.3834 14.4731C22.0827 14.7761 21.9138 15.187 21.9138 15.6154C21.9138 16.0438 22.0827 16.4547 22.3834 16.7576C22.6841 17.0606 23.092 17.2308 23.5172 17.2308H27.7931V24.7692H3.2069V17.2308H7.48276C7.90802 17.2308 8.31586 17.0606 8.61657 16.7576C8.91727 16.4547 9.08621 16.0438 9.08621 15.6154C9.08621 15.187 8.91727 14.7761 8.61657 14.4731C8.31586 14.1702 7.90802 14 7.48276 14H2.67241C1.96365 14 1.28391 14.2837 0.782732 14.7886C0.281557 15.2935 0 15.9783 0 16.6923V25.3077C0 26.0217 0.281557 26.7065 0.782732 27.2114C1.28391 27.7163 1.96365 28 2.67241 28H28.3276C29.0364 28 29.7161 27.7163 30.2173 27.2114C30.7184 26.7065 31 26.0217 31 25.3077V16.6923C31 15.9783 30.7184 15.2935 30.2173 14.7886C29.7161 14.2837 29.0364 14 28.3276 14ZM25.6552 21C25.6552 20.574 25.5298 20.1576 25.2949 19.8034C25.0599 19.4492 24.726 19.1731 24.3354 19.0101C23.9447 18.8471 23.5149 18.8044 23.1002 18.8875C22.6854 18.9706 22.3045 19.1758 22.0055 19.477C21.7065 19.7782 21.5029 20.162 21.4204 20.5798C21.3379 20.9976 21.3802 21.4307 21.5421 21.8242C21.7039 22.2178 21.9779 22.5542 22.3295 22.7909C22.6811 23.0275 23.0944 23.1538 23.5172 23.1538C24.0843 23.1538 24.628 22.9269 25.029 22.523C25.4299 22.1191 25.6552 21.5712 25.6552 21Z"
@@ -102,7 +110,7 @@
                             d="M25.4074 0H2.59259C1.90499 0 1.24556 0.273147 0.759353 0.759353C0.273147 1.24556 0 1.90499 0 2.59259V25.4074C0 26.095 0.273147 26.7544 0.759353 27.2406C1.24556 27.7269 1.90499 28 2.59259 28H25.4074C26.095 28 26.7544 27.7269 27.2406 27.2406C27.7269 26.7544 28 26.095 28 25.4074V2.59259C28 1.90499 27.7269 1.24556 27.2406 0.759353C26.7544 0.273147 26.095 0 25.4074 0ZM24.8889 24.8889H3.11111V3.11111H24.8889V24.8889ZM11.9259 20.2222V12.963C11.9262 12.6397 12.0272 12.3245 12.2149 12.0613C12.4026 11.7981 12.6676 11.5999 12.9731 11.4943C13.2787 11.3886 13.6095 11.3808 13.9197 11.4719C14.2299 11.5629 14.504 11.7484 14.7039 12.0024C15.494 11.5883 16.3776 11.385 17.2692 11.4122C18.1608 11.4394 19.0304 11.6961 19.7938 12.1577C20.5572 12.6192 21.1886 13.2699 21.627 14.0468C22.0654 14.8237 22.2959 15.7005 22.2963 16.5926V20.2222C22.2963 20.6348 22.1324 21.0304 21.8407 21.3222C21.549 21.6139 21.1533 21.7778 20.7407 21.7778C20.3282 21.7778 19.9325 21.6139 19.6408 21.3222C19.3491 21.0304 19.1852 20.6348 19.1852 20.2222V16.5926C19.1852 16.0425 18.9667 15.515 18.5777 15.126C18.1887 14.737 17.6612 14.5185 17.1111 14.5185C16.561 14.5185 16.0335 14.737 15.6445 15.126C15.2556 15.515 15.037 16.0425 15.037 16.5926V20.2222C15.037 20.6348 14.8731 21.0304 14.5814 21.3222C14.2897 21.6139 13.894 21.7778 13.4815 21.7778C13.0689 21.7778 12.6733 21.6139 12.3815 21.3222C12.0898 21.0304 11.9259 20.6348 11.9259 20.2222ZM9.85185 12.963V20.2222C9.85185 20.6348 9.68796 21.0304 9.39624 21.3222C9.10452 21.6139 8.70885 21.7778 8.2963 21.7778C7.88374 21.7778 7.48808 21.6139 7.19635 21.3222C6.90463 21.0304 6.74074 20.6348 6.74074 20.2222V12.963C6.74074 12.5504 6.90463 12.1547 7.19635 11.863C7.48808 11.5713 7.88374 11.4074 8.2963 11.4074C8.70885 11.4074 9.10452 11.5713 9.39624 11.863C9.68796 12.1547 9.85185 12.5504 9.85185 12.963ZM6.22222 7.77778C6.22222 7.36756 6.34386 6.96656 6.57177 6.62548C6.79967 6.2844 7.1236 6.01856 7.50258 5.86158C7.88157 5.7046 8.2986 5.66353 8.70093 5.74356C9.10326 5.82358 9.47282 6.02112 9.76289 6.31119C10.053 6.60125 10.2505 6.97081 10.3305 7.37315C10.4105 7.77548 10.3695 8.1925 10.2125 8.57149C10.0555 8.95048 9.78967 9.2744 9.44859 9.50231C9.10751 9.73021 8.70651 9.85185 8.2963 9.85185C7.74622 9.85185 7.21867 9.63333 6.8297 9.24437C6.44074 8.8554 6.22222 8.32786 6.22222 7.77778Z"
                             class="fill-[#051923] dark:fill-white" />
                     </svg>
-                    <span class="text-xs tracking-widest text-[#051923] dark:text-white">
+                    <span class="text-base tracking-widest text-[#051923] dark:text-white">
                         https://www.linkedin.com/in/makavuramughanga/
                     </span>
                 </a>
@@ -113,7 +121,7 @@
                             d="M27 0H3C1.35 0 0.015 1.35 0.015 3L0 21C0 22.65 1.35 24 3 24H27C28.65 24 30 22.65 30 21V3C30 1.35 28.65 0 27 0ZM27 6L15 13.5L3 6V3L15 10.5L27 3V6Z"
                             class="fill-[#051923] dark:fill-white" />
                     </svg>
-                    <span class="text-xs tracking-widest text-[#051923] dark:text-white">
+                    <span class="text-base tracking-widest text-[#051923] dark:text-white">
                         makavuramughanga@gmail.com
                     </span>
                 </a>
@@ -126,7 +134,7 @@
             </div>
 
 
-            <div class="my-4 m-plus-code-latin tracking-widest text-xs space-y-3 mt-2">
+            <div class="my-4 m-plus-code-latin tracking-widest text-base space-y-3 mt-2">
                 <p>I pursued design to bridge the gap between idea, development and revenue.</p>
                 <p>To leverage customer-centered-design in the
                     software development life cycle. Creating intuitive user interfaces, user experiences that reflect
@@ -142,7 +150,7 @@
                     Skills
                 </p>
                 <div class="tracking-wide">
-                    <span class="block mt-4 text-xs m-plus-code-latin tracking-widest">
+                    <span class="block mt-4 text-base m-plus-code-latin tracking-widest">
                         I can create/manage:
                     </span>
                     <hr class="h-[0.9px] bg-[#051923] dark:bg-white w-12 mt-4" />
@@ -169,7 +177,7 @@
 
                         <div class="flex flex-row py-2">
                             <div class="px-4 flex flex-col space-y-2 items-start">
-                                <p class="text-center text-xs tracking-widest">
+                                <p class="text-center text-base tracking-widest">
                                     <svg width="20" height="20" viewBox="0 0 20 20"
                                         class="inline my-auto fill-[#051923] dark:fill-white"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -180,7 +188,7 @@
                                     High Fidelity Mock-ups
                                 </p>
 
-                                <p class="text-center text-xs tracking-widest">
+                                <p class="text-center text-base tracking-widest">
                                     <svg width="20" height="20" viewBox="0 0 20 20"
                                         class="inline my-auto fill-[#051923] dark:fill-white"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +199,7 @@
                                     UI Component Library
                                 </p>
 
-                                <p class="text-center text-xs tracking-widest">
+                                <p class="text-center text-base tracking-widest">
                                     <svg width="20" height="20" viewBox="0 0 20 20"
                                         class="inline my-auto fill-[#051923] dark:fill-white"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +212,7 @@
 
                             </div>
                             <div class="flex flex-col items-start space-y-2 px-4">
-                                <p class="text-center text-xs tracking-widest">
+                                <p class="text-center text-base tracking-widest">
                                     <svg width="20" height="20" viewBox="0 0 20 20"
                                         class="inline my-auto fill-[#051923] dark:fill-white"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +222,7 @@
                                     Fully responsive web application design
                                 </p>
 
-                                <p class="text-center text-xs tracking-widest">
+                                <p class="text-center text-base tracking-widest">
                                     <svg width="20" height="20" viewBox="0 0 20 20"
                                         class="inline my-auto fill-[#051923] dark:fill-white"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +232,7 @@
                                     Mobile application design
                                 </p>
 
-                                <p class="text-center text-xs tracking-widest">
+                                <p class="text-center text-base tracking-widest">
                                     <svg width="20" height="20" viewBox="0 0 20 20"
                                         class="inline my-auto fill-[#051923] dark:fill-white"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -248,15 +256,15 @@
                 <p class="m-plus-code-latin tracking-widest mt-4  text-sm">
                     Digital Olives Studio
                 </p>
-                <span class="text-xs tracking-widest m-plus-code-latin">
+                <span class="text-base tracking-widest m-plus-code-latin">
                     A digital design & development agency based in Nairobi, Kenya.
                 </span>
-                <span class="text-xs tracking-widest m-plus-code-latin">
+                <span class="text-base tracking-widest m-plus-code-latin">
                     Full Stack Software Engineer (Web & Mobile), UI/UX Designer. Remote, contractual. - 2023 - Present
                 </span>
 
                 <div class="px-4 mt-2 flex flex-col space-y-2 items-start">
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -265,7 +273,7 @@
 
                         High fidelity mock-ups for web & mobile SAAS applications
                     </p>
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -280,14 +288,14 @@
                 <p class="m-plus-code-latin tracking-widest mt-4  text-sm">
                     Kisoko Labs
                 </p>
-                <span class="text-xs tracking-widest m-plus-code-latin">
+                <span class="text-base tracking-widest m-plus-code-latin">
                     A development agency based in Nairobi, Kenya.
                 </span>
-                <span class="text-xs tracking-widest m-plus-code-latin">
+                <span class="text-base tracking-widest m-plus-code-latin">
                     Full Stack Software Engineer, Designer on demand. Remote, contractual. - 2024 </span>
 
                 <div class="px-4 mt-2 flex flex-col space-y-2 items-start">
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -296,7 +304,7 @@
 
                         Pre-development design for approval by client before handing over to dev team
                     </p>
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -304,7 +312,7 @@
                         </svg>
                         Dashboard analytics design
                     </p>
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -320,14 +328,14 @@
                 <p class="m-plus-code-latin tracking-widest mt-4  text-sm">
                     eKraal Innovation Hub
                 </p>
-                <span class="text-xs tracking-widest m-plus-code-latin">
+                <span class="text-base tracking-widest m-plus-code-latin">
                     A development agency based in Nairobi, Kenya.
                 </span>
-                <span class="text-xs tracking-widest m-plus-code-latin">
+                <span class="text-base tracking-widest m-plus-code-latin">
                     Full time Full Stack Software Engineer, Designer on demand. - 2022 (Laid Off) </span>
 
                 <div class="px-4 mt-2 flex flex-col space-y-2 items-start">
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -336,7 +344,7 @@
 
                         Pre-development component/module design for approval by team lead before developing it
                     </p>
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -344,7 +352,7 @@
                         </svg>
                         MVP Design (Web) for a new team project, reporting directly to product owner
                     </p>
-                    <p class="text-center text-xs tracking-widest">
+                    <p class="text-center text-base tracking-widest">
                         <svg width="20" height="20" viewBox="0 0 20 20"
                             class="inline my-auto fill-[#051923] dark:fill-white" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -362,11 +370,11 @@
             <div class="mt-4 w-full mac-shadow border border-[#051923] dark:border-white rounded-none 
                   bg-white/60 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
                 <div class="border-solid rounded-t-sm border-b border-[#051923] dark:border-white py-2 px-4">
-                    <p class="tracking-widest m-plus-code-latin text-xs">Payment Options</p>
+                    <p class="tracking-widest m-plus-code-latin text-base">Payment Options</p>
                 </div>
-                <div class="flex flex-row">
-                    <div class="border-r-1 p-4 border-solid border-[#051923] dark:border-white w-1/3">
-                        <svg width="274" height="250" viewBox="0 0 274 250" fill="none" class="m-auto"
+                <div class="grid grid-cols-2 h-50">
+                    <div class="border-r-1 p-4 border-solid border-[#051923] dark:border-white overflow-hidden">
+                        <svg width="274" height="250" viewBox="0 0 274 250" fill="none" class="m-auto scale-75 -mt-10"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1077_808)">
                                 <path
@@ -450,16 +458,21 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="w-2/3">
+                    <div class="p-10 m-plus-code-latin text-base tracking-widest">
+                        <p class="">
+                            A particularly significant aspect of SAAS and cloud based businesses is payments.
 
+                            How do digital businesses get paid?
+                            I sought to answer and showcase this flow with this project.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div
-                class="mt-10 w-full mac-shadow border border-[#051923] dark:border-white rounded-sm bg-white/60 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
+                class="hidden mt-10 w-full mac-shadow border border-[#051923] dark:border-white rounded-sm bg-white/60 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
                 <div class="border-solid rounded-t-sm border-b border-[#051923] dark:border-white py-2 px-4">
-                    <p class="tracking-widest m-plus-code-latin text-xs">Mobile Authentication</p>
+                    <p class="tracking-widest m-plus-code-latin text-base">Mobile Authentication</p>
                 </div>
                 <div class="flex flex-row">
                     <div class="border-r-1 p-4 border-solid border-[#051923] dark:border-white w-1/3">
@@ -505,8 +518,6 @@
                                 d="M210.085 126.38C208.851 127.271 207.423 127.854 205.918 128.08C204.414 128.306 202.877 128.168 201.436 127.679C199.996 127.189 198.694 126.361 197.639 125.265C196.583 124.169 195.806 122.836 195.372 121.377C195.536 122.684 195.97 123.943 196.645 125.074C197.32 126.204 198.223 127.183 199.295 127.947C200.368 128.712 201.587 129.246 202.876 129.515C204.166 129.784 205.497 129.784 206.785 129.513C208.074 129.242 209.293 128.706 210.365 127.941C211.436 127.175 212.337 126.195 213.011 125.064C213.685 123.932 214.117 122.673 214.28 121.366C214.443 120.059 214.333 118.733 213.957 117.47C214.171 119.166 213.924 120.888 213.242 122.456C212.561 124.024 211.47 125.379 210.085 126.38Z"
                                 fill="#2F2E41" />
                         </svg>
-
-
                     </div>
                     <div class="w-2/3">
 
@@ -515,13 +526,14 @@
             </div>
 
             <div
-                class="mt-10 w-full mac-shadow border border-[#051923] dark:border-white rounded-sm bg-white/60 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
+                class="mt-10 w-full mac-shadow border border-[#051923] dark:border-white rounded-sm bg-white/60
+                 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
                 <div class="border-solid rounded-t-sm border-b border-[#051923] dark:border-white py-2 px-4">
-                    <p class="tracking-widest m-plus-code-latin text-xs">SAAS Application Shell</p>
+                    <p class="tracking-widest m-plus-code-latin text-base">Performance Appraisal Tracking</p>
                 </div>
-                <div class="flex flex-row">
-                    <div class="border-r-1 p-4 border-solid border-[#051923] dark:border-white w-1/3 ">
-                        <svg width="275" height="200" viewBox="0 0 275 200" fill="none" class="m-auto"
+                <div class="grid grid-cols-2 h-56 justify-start">
+                    <div class="overflow-hidden border-r-1 p-4 border-solid border-[#051923] dark:border-white">
+                        <svg width="275" height="200" viewBox="0 0 275 200" fill="none" class="m-auto scale-75"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M258.88 1.32376H49.032C49.0261 0.970781 48.8818 0.634251 48.6302 0.386652C48.3785 0.139054 48.0397 0.000199293 47.6867 0H39.4217C39.0687 0.000150387 38.7298 0.138985 38.4781 0.386595C38.2265 0.634204 38.0822 0.970765 38.0763 1.32376H36.0523C36.0464 0.970781 35.9021 0.634251 35.6504 0.386652C35.3988 0.139054 35.0599 0.000199293 34.7069 0H26.442C26.0889 0.000199293 25.7501 0.139054 25.4984 0.386652C25.2468 0.634251 25.1025 0.970781 25.0966 1.32376H17.7321C13.4583 1.32856 9.36096 3.02837 6.3389 6.05029C3.31684 9.0722 1.61691 13.1694 1.61204 17.4431V17.6018C1.58677 17.6003 1.56255 17.5942 1.53675 17.5942H1.34775C1.17076 17.5942 0.995504 17.629 0.831986 17.6968C0.668467 17.7645 0.519888 17.8638 0.394737 17.9889C0.269586 18.1141 0.170311 18.2626 0.102582 18.4261C0.0348526 18.5897 -4.98362e-06 18.7649 5.3442e-10 18.9419V34.706C-4.98362e-06 34.883 0.0348526 35.0582 0.102582 35.2217C0.170311 35.3852 0.269586 35.5338 0.394737 35.659C0.519888 35.7841 0.668467 35.8834 0.831986 35.9511C0.995504 36.0188 1.17076 36.0537 1.34775 36.0537H1.53675C1.56256 36.0537 1.58677 36.0475 1.61204 36.0461V183.881C1.61691 188.154 3.31684 192.252 6.3389 195.273C9.36096 198.295 13.4583 199.995 17.7321 200H258.88C263.154 199.995 267.251 198.295 270.273 195.273C273.295 192.251 274.995 188.154 275 183.881V17.4431C274.995 13.1695 273.295 9.07227 270.273 6.05036C267.251 3.02845 263.154 1.32861 258.88 1.32376ZM270.148 183.881C270.145 186.868 268.956 189.732 266.844 191.844C264.732 193.957 261.868 195.145 258.88 195.148H17.7321C14.7447 195.145 11.8806 193.957 9.76811 191.844C7.65565 189.732 6.46736 186.868 6.46394 183.881V17.4431C6.46736 14.4558 7.65565 11.5917 9.76811 9.4794C11.8806 7.36705 14.7447 6.17886 17.7321 6.17551H258.88C261.868 6.17893 264.732 7.36714 266.844 9.47948C268.956 11.5918 270.145 14.4558 270.148 17.4431V183.881Z"
@@ -668,10 +680,18 @@
                                 d="M98.8076 108.899C96.5057 108.899 94.2981 109.814 92.6704 111.441C91.0427 113.069 90.1283 115.277 90.1283 117.578C90.1283 122.372 98.8076 138.112 98.8076 138.112C98.8076 138.112 107.487 122.372 107.487 117.578C107.487 115.277 106.572 113.069 104.945 111.441C103.317 109.814 101.109 108.899 98.8076 108.899ZM98.8076 121.812C98.0121 121.812 97.2345 121.576 96.573 121.134C95.9116 120.692 95.3961 120.064 95.0916 119.329C94.7872 118.594 94.7075 117.786 94.8627 117.005C95.0179 116.225 95.401 115.509 95.9635 114.946C96.526 114.384 97.2427 114.001 98.0229 113.845C98.8031 113.69 99.6118 113.77 100.347 114.074C101.082 114.379 101.71 114.894 102.152 115.556C102.594 116.217 102.83 116.995 102.83 117.79C102.83 118.857 102.406 119.88 101.652 120.634C100.897 121.388 99.8743 121.812 98.8076 121.812Z"
                                 fill="#3F3D56" />
                         </svg>
-
                     </div>
-                    <div class="w-2/3">
+                    <div class="p-4 m-plus-code-latin text-base tracking-widest">
+                        <p class="">
+                            This was a decision to show how I go about developing software.
+                            Since my process is inclusive of design, that was the next step after ideating an MVP.
+                        </p>
+                        <p class="mt-2">
 
+                            This is a performance appraisal demo that enables HR professionals create questionnaires as
+                            forms. Data is
+                            collated from appropriate roles appraising an employees’ performance.
+                        </p>
                     </div>
                 </div>
             </div>
