@@ -21,8 +21,8 @@
 
 </head>
 
-<body id="body" class=" container-cube bg-white/60 dark:bg-[#051923]/60 backdrop-filter shadow-2xl">
-    <div class="w-screen container mx-auto p-20 h-screen">
+<body id="body" class="container-cube bg-white/60 dark:bg-[#051923]/60 backdrop-filter shadow-2xl">
+    <div class="w-screen container mx-auto p-10 md:p-20">
         <header class="flex justify-between items-center mb-8">
 
             <div
@@ -36,17 +36,16 @@
 
 
             <div id="theme-toggler"
-                class="rounded-full p-4 hover:scale-150 bg-white/60 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
+                class="rounded-full p-6 hover:scale-150 bg-white/60 dark:bg-[#051923]/60 backdrop-blur-sm backdrop-filter shadow-2xl">
             </div>
 
         </header>
 
         <div id="main-page-navigation" class="absolute z-10 bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl 
-           hidden h-fit w-[70vw] rounded-br-[999px] px-20 py-24 mac-shadow flex-col">
-            <svg 
-                id="navigation-close-button"
-                class="hover:cursor-pointer hover:scale-125 fill-[#051923] dark:fill-white"
-                width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+           hidden h-fit lg:w-[70vw] lg:rounded-br-[999px] px-20 py-24 mac-shadow flex-col">
+            <svg id="navigation-close-button"
+                class="hover:cursor-pointer hover:scale-125 fill-[#051923] dark:fill-white" width="20" height="20"
+                viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M12.075 14.6461L3.07614 23.645C2.73945 23.9817 2.31093 24.15 1.79059 24.15C1.27025 24.15 0.841729 23.9817 0.505037 23.645C0.168345 23.3083 0 22.8798 0 22.3594C0 21.8391 0.168345 21.4105 0.505037 21.0739L9.5039 12.075L0.505037 3.07614C0.168345 2.73945 0 2.31093 0 1.79059C0 1.27025 0.168345 0.841729 0.505037 0.505037C0.841729 0.168345 1.27025 0 1.79059 0C2.31093 0 2.73945 0.168345 3.07614 0.505037L12.075 9.5039L21.0739 0.505037C21.4105 0.168345 21.8391 0 22.3594 0C22.8798 0 23.3083 0.168345 23.645 0.505037C23.9817 0.841729 24.15 1.27025 24.15 1.79059C24.15 2.31093 23.9817 2.73945 23.645 3.07614L14.6461 12.075L23.645 21.0739C23.9817 21.4105 24.15 21.8391 24.15 22.3594C24.15 22.8798 23.9817 23.3083 23.645 23.645C23.3083 23.9817 22.8798 24.15 22.3594 24.15C21.8391 24.15 21.4105 23.9817 21.0739 23.645L12.075 14.6461Z"
                     fill="" />
@@ -90,7 +89,8 @@
                         </svg>
                     </a>
 
-                    <button class="flex space-x-8 bg-[#F1FAEE] dark:bg-[#051923]  px-4 py-3 hover:cursor-pointer
+                    <a href="https://drive.google.com/file/d/1NCjm8-dMWh55tS37QgoIadYX86DV6HFN/view" target="_blank"
+                        rel="noopener noreferrer" class="flex space-x-8 bg-[#F1FAEE] dark:bg-[#051923]  px-4 py-3 hover:cursor-pointer
                 drop-shadow-[0px_3px_6px_rgba(0,0,0,0.16),0px_3px_6px_rgba(0,0,0,0.23)] hover:scale-110">
                         <span
                             class="m-plus-code-latin text-xs tracking-widest pr-8 border-r border-black my-auto dark:text-white">Resume</span>
@@ -99,7 +99,7 @@
                                 d="M7.95177 10.2967C7.65054 9.99326 7.48131 9.58167 7.48131 9.1525C7.48131 8.72333 7.65054 8.31174 7.95177 8.00827C8.25299 7.7048 8.66154 7.53431 9.08754 7.53431C9.51354 7.53431 9.92209 7.7048 10.2233 8.00827L13.8966 11.7115V1.61538C13.8966 1.18696 14.0655 0.776079 14.3662 0.473135C14.6669 0.170192 15.0747 0 15.5 0C15.9253 0 16.3331 0.170192 16.6338 0.473135C16.9345 0.776079 17.1034 1.18696 17.1034 1.61538V11.7115L20.7794 8.00692C21.0806 7.70345 21.4891 7.53297 21.9151 7.53297C22.3411 7.53297 22.7497 7.70345 23.0509 8.00692C23.3521 8.31039 23.5214 8.72198 23.5214 9.15115C23.5214 9.58032 23.3521 9.99192 23.0509 10.2954L16.6371 16.7569C16.4881 16.9075 16.3111 17.027 16.1162 17.1085C15.9213 17.1901 15.7124 17.232 15.5013 17.232C15.2903 17.232 15.0813 17.1901 14.8864 17.1085C14.6915 17.027 14.5145 16.9075 14.3656 16.7569L7.95177 10.2967ZM28.3276 14H23.5172C23.092 14 22.6841 14.1702 22.3834 14.4731C22.0827 14.7761 21.9138 15.187 21.9138 15.6154C21.9138 16.0438 22.0827 16.4547 22.3834 16.7576C22.6841 17.0606 23.092 17.2308 23.5172 17.2308H27.7931V24.7692H3.2069V17.2308H7.48276C7.90802 17.2308 8.31586 17.0606 8.61657 16.7576C8.91727 16.4547 9.08621 16.0438 9.08621 15.6154C9.08621 15.187 8.91727 14.7761 8.61657 14.4731C8.31586 14.1702 7.90802 14 7.48276 14H2.67241C1.96365 14 1.28391 14.2837 0.782732 14.7886C0.281557 15.2935 0 15.9783 0 16.6923V25.3077C0 26.0217 0.281557 26.7065 0.782732 27.2114C1.28391 27.7163 1.96365 28 2.67241 28H28.3276C29.0364 28 29.7161 27.7163 30.2173 27.2114C30.7184 26.7065 31 26.0217 31 25.3077V16.6923C31 15.9783 30.7184 15.2935 30.2173 14.7886C29.7161 14.2837 29.0364 14 28.3276 14ZM25.6552 21C25.6552 20.574 25.5298 20.1576 25.2949 19.8034C25.0599 19.4492 24.726 19.1731 24.3354 19.0101C23.9447 18.8471 23.5149 18.8044 23.1002 18.8875C22.6854 18.9706 22.3045 19.1758 22.0055 19.477C21.7065 19.7782 21.5029 20.162 21.4204 20.5798C21.3379 20.9976 21.3802 21.4307 21.5421 21.8242C21.7039 22.2178 21.9779 22.5542 22.3295 22.7909C22.6811 23.0275 23.0944 23.1538 23.5172 23.1538C24.0843 23.1538 24.628 22.9269 25.029 22.523C25.4299 22.1191 25.6552 21.5712 25.6552 21Z"
                                 class="fill-[#051923] dark:fill-white" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="flex flex-col mt-10 space-y-4">
@@ -128,9 +128,10 @@
             </div>
         </div>
 
-        <main class="flex-grow flex items-start text-[#051923] dark:text-white ">
-            <div class="flex flex-col w-1/3 pr-10">
-                <div class="libre-barcode text-7xl my-4 w-48 text-left tracking-wider flex flex-col space-y-10 leading-[72px]">
+        <main class="flex-grow flex flex-col md:flex-row items-start text-[#051923] dark:text-white ">
+            <div class="flex flex-col w-1/3 pl-2 md:pl-0 pr-10">
+                <div
+                    class="libre-barcode text-7xl my-4 w-48 text-left tracking-wider flex flex-col space-y-10 leading-[72px]">
                     <span>Joel</span>
                     <span>Makavura</span>
                     <span>Mughanga</span>
@@ -184,7 +185,8 @@
                 </div>
 
 
-                <div class="mac-shadow space-y-4 tracking-widest text-base p-4 mb-4 bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl">
+                <div class="mac-shadow space-y-4 tracking-widest text-base p-4 
+                mb-4 bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl hidden md:block">
                     <p class="">
                         I love software. I especially enjoy making it look and feel good. This has translated to
                         self-taught endeavors in the field of design (UI/UX), Quality Assurance and Agile Ceremonies
@@ -198,13 +200,14 @@
                     </p>
                 </div>
 
-                <hr class="bg-[#051923] dark:bg-white w-full mt-2 mb-6" />
+                <hr class="bg-[#051923] dark:bg-white w-full mt-2 mb-6 hidden md:block" />
 
-                <div class="grid grid-cols-4 space-x-4 justify-between">
-                    <div class="h-full w-60 py-4 flex flex-col items-center justify-end rounded-sm
+                <div
+                    class="space-y-4 md:space-y-0 grid grid-cols-2 gap-4 md:gap-0 md:grid md:grid-cols-4  md:space-x-4 justify-between">
+                    <div class="h-full  py-4 flex flex-col items-center justify-end rounded-sm
                               bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl">
-                        <svg width="180" height="255" viewBox="0 0 180 255" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill-[#051923] dark:fill-white"
+                                 viewBox="0 0 180 255" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.000228455 253.414C-0.00214948 253.529 0.0226483 253.643 0.0726049 253.746C0.0864874 253.783 0.110164 253.815 0.141058 253.839C0.171952 253.864 0.208882 253.879 0.247835 253.883H179.752C179.889 253.883 180 253.673 180 253.414C180 253.155 179.889 252.944 179.752 252.944H0.246566C0.207557 252.949 0.170559 252.964 0.139605 252.988C0.10865 253.013 0.0849235 253.045 0.0710161 253.082C0.021607 253.185 -0.00264408 253.299 0.000228455 253.414Z"
                                 fill="#CCCCCC" />
@@ -320,10 +323,10 @@
                         <p class="geo tracking-widest text-xl">Excellence</p>
                     </div>
 
-                    <div class="h-full w-60 py-4 flex flex-col items-center justify-end rounded-sm
+                    <div class="h-full  py-4 flex flex-col items-center justify-end rounded-sm
                               bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl">
-                        <svg width="131" height="300" viewBox="0 0 131 300" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill-[#051923] dark:fill-white
+                                " viewBox="0 0 131 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M111.333 120.668C110.989 120.668 110.645 120.641 110.306 120.587L72.1312 114.598C71.2547 114.461 70.4145 114.149 69.6603 113.681C68.9061 113.214 68.253 112.6 67.7396 111.877C67.2261 111.153 66.8626 110.334 66.6705 109.468C66.4784 108.601 66.4616 107.706 66.6211 106.833L74.585 63.339C74.8905 61.6411 75.8459 60.1292 77.2483 59.1244C78.6507 58.1196 80.3896 57.7012 82.0955 57.958L119.648 63.4947C120.523 63.6239 121.362 63.926 122.119 64.3835C122.875 64.8409 123.532 65.4444 124.053 66.1589C124.573 66.8733 124.946 67.6842 125.149 68.5443C125.352 69.4044 125.382 70.2964 125.237 71.1681L117.895 115.114C117.63 116.664 116.827 118.072 115.627 119.088C114.426 120.104 112.906 120.664 111.333 120.668Z"
                                 fill="#F2F2F2" />
@@ -389,10 +392,10 @@
                         <p class="geo tracking-widest  text-xl">Quality</p>
                     </div>
 
-                    <div class="h-full w-60 py-4 flex flex-col items-center justify-end rounded-sm
+                    <div class="h-full  py-4 flex flex-col items-center justify-end rounded-sm
                               bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl">
-                        <svg width="104" height="200" viewBox="0 0 104 200" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill-[#051923] dark:fill-white
+                                " viewBox="0 0 104 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M84.6158 32.2155H14.6422L15.17 31.6408C18.4824 28.0343 20.5327 21.1346 21.4387 10.5491C21.6618 7.67229 22.9645 4.98627 25.0853 3.02978C27.2061 1.07329 29.9882 -0.00898177 32.8736 5.61527e-05H66.4403C69.3225 -0.00736724 72.1011 1.0736 74.2206 3.02675C76.34 4.9799 77.6439 7.66122 77.8715 10.5344C78.6774 19.7803 80.7037 26.4993 84.2487 31.6796L84.6158 32.2155Z"
                                 fill="#E6E6E6" />
@@ -443,10 +446,10 @@
                         <p class="geo tracking-widest  text-xl">Speed</p>
                     </div>
 
-                    <div class="h-full w-60 py-4 flex flex-col items-center justify-end rounded-sm
+                    <div class="h-full  py-4 flex flex-col items-center justify-end rounded-sm
                               bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl">
-                        <svg width="160" height="287" viewBox="0 0 160 287" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="fill-[#051923] dark:fill-white
+                                " viewBox="0 0 160 287" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0 285.765C0 286.025 0.142356 286.234 0.319556 286.234H159.68C159.859 286.234 160 286.025 160 285.765C160 285.505 159.858 285.297 159.68 285.297H0.319556C0.142356 285.297 0 285.506 0 285.765Z"
                                 fill="#CCCCCC" />
@@ -549,6 +552,26 @@
                         <p class="geo tracking-widest  text-xl">Innovation</p>
                     </div>
                 </div>
+
+                <hr class="bg-[#051923] dark:bg-white w-full mt-2 mb-6 md:hidden block" />
+
+                <div
+                    class="mac-shadow space-y-4 tracking-widest text-base p-4 
+                                mb-4 bg-white/60 dark:bg-[#051923]/60 backdrop-blur backdrop-filter shadow-2xl md:hidden block">
+                    <p class="">
+                        I love software. I especially enjoy making it look and feel good. This has translated to
+                        self-taught endeavors in the field of design (UI/UX), Quality Assurance and Agile Ceremonies
+                        Management.
+                    </p>
+                    <p class="">
+                        I am a lifelong learner who is Innovative, driven, collaborative and
+                        passionate about growth, with the capacity to create socially impactful,
+                        sustainable businesses and scalable solutions. Highly adaptable with the
+                        ability to excel in new fields.
+                    </p>
+                </div>
+
+
             </div>
 
         </main>
