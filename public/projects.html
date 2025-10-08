@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makavura Mughanga | Digital applications designer and developer</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./build/tw.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./build/elements/banner-link/index.js" type="text/javascript" defer></script>
+    <script src="./build/elements/navigation/navigation-element/index.js" type="text/javascript" defer></script>
+    <script src="./build/elements/navigation/index.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Dekko&family=Syne+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="w-full">
+    <navigation-stack></navigation-stack>
+    <div class="flex flex-col lg:grid lg:grid-cols-6 content-center">
+        <div class="lg:col-span-2 lg:h-full mb-20">
+            <p class="text-4xl tracking-[15px] leading-[80px] text-[#45d62f] aloja md:ml-4 lg:ml-20">
+                Project:
+            </p>
+            <img src="./assets/svg/searching.svg" class="rounded-md drop-shadow-xl shadow-2xl md:w-3/5 lg:h-[450px]" />
+            <div class="pl-4 md:pl-20 py-4 lg:w-[489px]">
+                <p class="aloja text-3xl">
+                    Payment Methods Demo
+                </p>
+                <hr class="my-2" />
+                <p class="my-4 dekko text-2xl uppercase">
+                    provide a self documented end to end solution to the problem of third party payment provision for
+                    SAAS
+                    and e-commerce
+                    applications.
+
+                </p>
+                <a href="https://makavura-payment-methods.web.app/"
+                    class="mansalva text-sm my-4 underline text-emerald-300 hover:text-base">
+                    https://makavura-payment-methods.web.app/
+                </a>
+            </div>
+        </div>
+        <div class="p-4 flex flex-col md:flex-row lg:col-span-4 text-2xl h-full w-full">
+            <div class="mr-4 mansalva text-3xl md:text-[3rem] lg:text-[5rem] leading-[1.3em] my-auto">
+                A demonstration of the 3 common payment flows used in web development: Checkout, Checkout with account
+                and
+                Subscriptions.
+            </div>
+
+            <img id="payment-methods"
+                src="https://digitalolivesstudio.sirv.com/Digital%20Olives%20Studio/Portfolio/makavura-payment-methods.web.app_(iPad%20Mini).png"
+                class="md:w-3/5 lg:w-[350px] rounded-md hover:scale-125">
+
+        </div>
+    </div>
+    <div class="flex flex-col lg:grid lg:grid-cols-6 content-center">
+        <div class="lg:col-span-2 lg:h-full mb-20">
+            <p class="text-4xl tracking-[15px] leading-[80px] text-[#45d62f] aloja md:ml-4 lg:ml-20">
+                Project:
+            </p>
+            <img src="./assets/svg/design.svg" class="rounded-md drop-shadow-xl shadow-2xl md:w-3/5 lg:h-[450px]" />
+            <div class="pl-4 md:pl-20 py-4 md:w-full lg:w-[489px]">
+                <p class="aloja text-2xl">
+                    Performance appraisal
+                </p>
+                <hr class="my-2" />
+                <p class="my-4 dekko text-xl uppercase">
+                    A hackathon dare that turned into a showcase for a bare bones MVP to enable HR Professionals create
+                    dynamic forms (appraisals) and their subsequent listing, view and deletion.
+                </p>
+                <a href="https://github.com/Makavura/performance-tracking-appraisal"
+                    class="mansalva text-sm  my-4 block underline text-emerald-300 hover:text-base">
+                    https://github.com/Makavura/performance-tracking-appraisal
+                </a>
+                <a href="https://makavura-payment-methods.web.app/"
+                    class="mansalva text-sm my-4 underline text-emerald-300 hover:text-base">
+                    https://performance-tracking-appraisal.web.app/
+                </a>
+            </div>
+        </div>
+        <div class="p-4 col-span-4 text-2xl h-full flex flex-col md:flex-row">
+            <div class="mansalva text-3xl md:text-[1.8rem] lg:text-[4rem] leading-[1.3em] my-auto">
+                Enable HR professionals to perform periodic evaluation of
+                employee performance.
+                Create dynamic forms to customize appraisal to your unique organization's needs.
+            </div>
+            <img id="performance-appraisal"
+                src="https://digitalolivesstudio.sirv.com/Digital%20Olives%20Studio/Portfolio/performance-tracking-appraisal.web.app_(iPad%20Mini).png"
+                class="md:w-3/5 lg:h-[900px] rounded-md hover:scale-110">
+        </div>
+    </div>
+    <script>
+        const paymentMethodsImg = document.getElementById('payment-methods');
+        const appraisalTrackerImg = document.getElementById('performance-appraisal');
+
+        paymentMethodsImg
+            .addEventListener('click', () => {
+                window.open("https://makavura-payment-methods.web.app/", "_blank")
+            });
+        appraisalTrackerImg.
+            addEventListener('click', () => {
+                window.open("https://performance-tracking-appraisal.web.app/", "_blank")
+            });
+
+    </script>
+</body>
+
+</html>
