@@ -10,14 +10,12 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         "quality-assurance": resolve(__dirname, "quality-assurance.html"),
         "ui-ux": resolve(__dirname, "ui-ux.html"),
-        "software-engineering": resolve(
-          __dirname,
-          "software-engineering.html"
-        ),
+        "software-engineering": resolve(__dirname, "software-engineering.html"),
       },
       output: {
         sanitizeFileName: true,
       },
     },
+    outDir: "docs",
   },
 });
