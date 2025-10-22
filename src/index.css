@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "mononoki"; 
-  src: url("mononoki-regular.ttf") format("truetype");
+  src: url("./../mononokiregular.ttf") format("truetype");
   font-weight: normal; 
   font-style: normal; 
 }
